@@ -20,7 +20,7 @@ const sizes = {
   `,
 };
 
-const variations = {
+const variation = {
   primary: css`
     color: var(--color-brand-50);
     background-color: var(--color-brand-600);
@@ -53,11 +53,11 @@ const Button = styled.button`
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
   ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variations]}
+  ${(props) => variation[props.variation]}
 `;
 
 Button.defaultProps = {
-  variations: 'primary',
+  variation: 'primary',
   size: 'medium',
 };
 
