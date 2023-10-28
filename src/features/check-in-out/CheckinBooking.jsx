@@ -103,13 +103,10 @@ function CheckinBooking() {
       </Box>
 
       <ButtonGroup>
-        {status === 'unconfirmed' && (
-          <Button
-            onClick={handleCheckin}
-            disabled={!confirmPaid || isCheckingIn}>
-            Check in booking #{bookingId}
-          </Button>
-        )}
+        <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckingIn}>
+          Check in booking #{bookingId}
+        </Button>
+
         <Button variation="secondary" onClick={moveBack}>
           Back
         </Button>
