@@ -3,7 +3,7 @@ import { useUser } from '../features/authentication/useUser';
 import Spinner from './Spinner';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-const fullPage = styled.div`
+const FullPage = styled.div`
   height: 100vh;
   background-color: var(--color-grey-50);
   display: flex;
@@ -24,9 +24,9 @@ function ProtectedRoute({ children }) {
 
   if (isLoading)
     return (
-      <fullPage>
+      <FullPage>
         <Spinner />
-      </fullPage>
+      </FullPage>
     );
 
   if (isAuthenticated) return children;
